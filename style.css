@@ -12,9 +12,11 @@ body{
     font-family: 'Poppins', sans-serif;
     background: hsl(45, 29%, 97%);
     margin: 0;
-    overflow-x: hidden;
     color: hsl(0, 0%, 13%);
-    max-width: 100%;
+}
+*{
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 #theBar{
     width: 80vw;
@@ -47,15 +49,17 @@ body{
 #infoFlexbox{
     position: absolute;
     display: flex;
-    width: 1000%;
+    width: 2000%;
     top: 70%;
+    justify-content: space-evenly;
+    align-content: start;
 }
 @keyframes shrinkInfo{
-    0% {width: 1000%}
+    0% {width: 2000%}
     100% {width: 100%;}
 }
 .flexContainer{
-    width: 25%;
+    flex: 1;
     text-align: center;
 }
 #icon{
@@ -73,10 +77,16 @@ h1{
     font-size: 5vh;
 }
 @media (max-width: 1180px){
-    .infoFlexbox{
-        flex-wrap: nowrap;
+    #infoFlexbox{
         flex-direction: column;
-        justify-content: start;
-        align-content: start
+    }
+    #theBar{
+        font-size: 30px;
+        padding: 0;
+        padding-left: 5vh;
+        padding-right: 5vh;
+    }
+    h1{
+        font-size: 2.5vh;
     }
 }
