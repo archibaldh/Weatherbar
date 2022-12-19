@@ -1,0 +1,82 @@
+/*
+                   _     _        _    _
+    /\            | |   (_)      | |  | |
+   /  \   _ __ ___| |__  _  ___  | |__| | __ _ _ __  ___  ___ _ __
+  / /\ \ | '__/ __| '_ \| |/ _ \ |  __  |/ _` | '_ \/ __|/ _ \ '_ \
+ / ____ \| | | (__| | | | |  __/ | |  | | (_| | | | \__ \  __/ | | |
+/_/    \_\_|  \___|_| |_|_|\___| |_|  |_|\__,_|_| |_|___/\___|_| |_|
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    background: hsl(45, 29%, 97%);
+    margin: 0;
+    overflow-x: hidden;
+    color: hsl(0, 0%, 13%);
+    max-width: 100%;
+}
+#theBar{
+    width: 80vw;
+    height: 8vh;
+    padding: 1vh;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    font-size: 5vh;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 100px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+#verticenter{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+@keyframes shrinkBar {
+    100% {width: 50%}
+    100% {height: 50px}
+    100% {top: 10%;}
+}
+#infoFlexbox{
+    position: absolute;
+    display: flex;
+    width: 1000%;
+    top: 70%;
+}
+@keyframes shrinkInfo{
+    0% {width: 1000%}
+    100% {width: 100%;}
+}
+.flexContainer{
+    width: 25%;
+    text-align: center;
+}
+#icon{
+    width: 100%;
+    font-size: 30vh;
+    position: absolute;
+    top: 25%;
+    text-align: center;
+    opacity: 0;
+}
+@keyframes iconFade{
+    100% {opacity: 100%}
+}
+h1{
+    font-size: 5vh;
+}
+@media (max-width: 1180px){
+    .infoFlexbox{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+        align-content: start
+    }
+}
