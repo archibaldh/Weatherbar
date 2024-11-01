@@ -41,7 +41,7 @@ function geocodeAPI(){
 
         console.log(json)
         document.getElementById("degrees").innerHTML = `Temperature : ${Math.round(temp)}°C`;
-        document.getElementById("feelsLike").innerHTML = `Feels like ${Math.round(feelsLike)}°C`;
+        document.getElementById("feelsLike").innerHTML = `Feels like : ${Math.round(feelsLike)}°C`;
         document.getElementById("humidity").innerHTML = `Humidity: ${Math.round(humidity)}%`;
         document.getElementById("wind").innerHTML = `Wind: ${Math.round(windSpeed)} km/h`;
         document.getElementById("icon").classList.remove("fa-cloud-sun");
